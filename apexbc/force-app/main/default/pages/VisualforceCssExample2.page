@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:stylesheet value="{!$Resource.apexcss}" />
+    <h1>
+        Welcome to Visualforce Page with CSS styling!
+    </h1>
+    <p>
+        This is the test play to demo how css work with visualforce page.
+    </p>
+    <apex:outputText styleClass="sales" value="Visualforce Page"></apex:outputText>
+</apex:page>

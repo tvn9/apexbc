@@ -1,0 +1,13 @@
+<apex:page >
+  <h1>Hello {!$User.FirstName} Welcome to Salesforce {!$User.LastName} </h1>
+  <p>Today's date is {! Today()} </p>
+  <p>Same day next week will be {! Today()+7} </p>
+  <p>Current year is {! YEAR(Today())} </p>
+  <p>Tomorrow is {! Today()+1} </p>
+  
+  <p>Find max {! Max(2,3,4,5,7,9)}, find min {! Min(2,3,4,5,7,9)} </p>
+  
+  <p>The sqrt of 49 is {! SQRT(49)} </p>
+  
+  <p>salesforce.com contain force? {! Contains('salesforce.com', 'force')} </p>
+</apex:page>

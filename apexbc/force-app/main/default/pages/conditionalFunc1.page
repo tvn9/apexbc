@@ -1,0 +1,4 @@
+<apex:page >
+  {! if (Contains('salsforce.com', 'four'), 'Yes', 'No')}<br/>
+  {! if (Day(Today()) > 10, 'After the 10th', 'Before the 10th')}
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page renderAs="pdf">
+  <center> 
+      <h1>RENDER THIS PAGE as PDF DOCUMENT</h1>
+      
+      <h2>Introduction</h2>
+      <p>The last steps in your discount approval process are creating final approval actions and final rejection actions. Final approval actions occur when all required approvals are obtained. Final rejection actions occur when an approver rejects the request and it moves to the final rejection state. Based on the criteria set by VP Allison Wheeler, either she or a Manager may have actions to complete at this point, depending on the percentage of the discount requested.</p>
+      
+  </center>
+</apex:page>
