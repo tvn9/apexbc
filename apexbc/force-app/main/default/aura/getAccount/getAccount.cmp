@@ -1,0 +1,38 @@
+<aura:component controller="getAccountHelperClass" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+  <aura:attribute name="recordId" type="string"></aura:attribute>
+  <aura:attribute name="responseSuccess" type="Boolean" default="true"></aura:attribute>
+  <aura:attribute name="columns" type="list"></aura:attribute>
+  <aura:attribute name="accountList" type="list"></aura:attribute>
+  <aura:attribute name="oppList" type="list"></aura:attribute>
+  <lightning:button label="Get Accounts" onclick="{​!c.getAccountList}​"></lightning:button>
+  <lightning:button label="Hide Accounts" onclick="{​!c.hideAccounts}​"></lightning:button>
+  <lightning:button label="Get Opportunities" onclick="{​!c.getOpportunityList}​"></lightning:button>
+    <br/>
+      <aura:if isTrue="{​!v.responseSuccess}​">
+        <div style="color: blue; padding: 2%">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Id</td>
+          </tr>
+          <aura:iteration items="{​!v.accountList}​" var="acc">
+            <tr>
+              <td>{​!acc.Name}​</td>
+              <td>{​!acc.Id}​</td>
+            </tr>
+          </aura:iteration>
+        </table>
+    </div>
+        <aura:set attribute="else">
+            <lightning:formattedText value="Accounts hidden"></lightning:formattedText>
+        </aura:set>
+    </aura:if>
+    <div style="color:green; padding:2%">
+      <lightning:datatable
+        keyField="id"
+        data="{​!v.oppList}​"
+        columns="{​!v.columns}​" 
+        hideCheckboxColumn="true">
+      </lightning:datatable>               
+    </div>
+</aura:component>
